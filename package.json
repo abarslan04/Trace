@@ -1,0 +1,29 @@
+{
+  "name": "trace",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "mobile"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev:backend": "npm run dev --workspace @trace/backend",
+    "dev:mobile": "npm run start --workspace @trace/mobile",
+    "dev:web": "npm run web --workspace @trace/mobile",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm run test --workspaces",
+    "build:backend": "npm run build --workspace @trace/backend",
+    "build:mobile": "npm run build --workspace @trace/mobile",
+    "check": "npm run typecheck && npm test && npm run build:backend && npm run build:mobile",
+    "test:live": "node scripts/smoke-api.mjs",
+    "test:browser": "node scripts/browser-smoke.mjs",
+    "test:location-browser": "node scripts/location-browser-smoke.mjs",
+    "test:worker": "node scripts/worker-smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@trace/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "web": "expo start --web",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "typecheck": "tsc --noEmit",
+    "build": "expo export --platform all",
+    "build:web": "expo export --platform web --clear",
+    "test": "vitest run",
+    "postinstall": "node scripts/prepare-map-worker.mjs",
+    "prestart": "node scripts/prepare-map-worker.mjs",
+    "preweb": "node scripts/prepare-map-worker.mjs",
+    "prebuild": "node scripts/prepare-map-worker.mjs",
+    "prebuild:web": "node scripts/prepare-map-worker.mjs"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.16",
+    "@maplibre/maplibre-react-native": "11.5.0",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "57.0.27",
+    "expo-dev-client": "~57.0.19",
+    "expo-location": "~57.0.20",
+    "expo-status-bar": "~57.0.1",
+    "expo-system-ui": "~57.0.4",
+    "maplibre-gl": "6.13.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "~0.21.0"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "@types/react": "~19.2.0",
+    "@types/react-test-renderer": "^19.3.0",
+    "react-test-renderer": "^19.2.3",
+    "typescript": "~5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

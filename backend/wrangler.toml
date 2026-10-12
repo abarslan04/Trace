@@ -1,0 +1,11 @@
+name = "trace-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-08"
+workers_dev = true
+
+[vars]
+# Native apps do not require CORS. Set explicit comma-separated origins for web clients.
+ALLOWED_ORIGINS = "https://5262eb5d.trace-web-6b4.pages.dev"
+
+# Set locally in .dev.vars and in production with `wrangler secret put GRAPHHOPPER_API_KEY`.
+# Do not put API keys here.
